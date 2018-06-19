@@ -1,5 +1,6 @@
 /* coded by Sofia Silva */
 @import url('https://fonts.googleapis.com/css?family=Bitter');
+
 body {
   margin: 0;
   background-color: #6ec6a0; 
@@ -25,13 +26,12 @@ body {
   height: auto;
 }
 main {
-  background: url("https://s15.postimg.cc/t2xm0y4zv/blu_stripes.png"); /* background from https://www.toptal.com/designers/subtlepatterns/ */
+  background: url("https://s15.postimg.cc/t2xm0y4zv/blu_stripes.png");
   width: 800px;
   margin: auto;
   margin-top: 100px;
   padding: 50px;
 }
-
 ul {
   list-style: none;
   display: flex;
@@ -60,12 +60,39 @@ li {
 }
 @keyframes border {
   0%{
-    border-bottom: 2.5px white solid;
+    border-bottom: 2.5px transparent solid;
   }
   100% {
     border-bottom: 2.5px #1f5879 solid; 
   }
 }
+.title {
+  font-size: 30px;
+}
 .row {
   display: flex;
+  align-items: center;
+}
+.column {
+  box-sizing: border-box;
+}
+.column.left {
+  width: 30%;
+}
+.column.right {
+  width: 70%;
+  text-align: left;
+}
+.column.right h2 {
+  margin-bottom: 0;
+}
+.column.right p {
+  margin-top: 5px;
+}
+.fas {
+  font-size: 50px;
+  color: #10afad;
+}
+#video {
+  padding: 50px;
 }
