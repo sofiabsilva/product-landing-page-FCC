@@ -98,6 +98,7 @@ main {
   padding: 60px;
 }
 #pricing {
+  margin-top: 50px;
   display:flex;
   max-width: 740px;
   margin: auto;
@@ -150,6 +151,13 @@ button:hover {
 }
 #submit {
     padding: 8px;
+    background-color: #10afad;
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 17px;
+    margin: 4px 2px;
+    cursor: pointer;
 }
 footer {
   background-color:#f0f5f8;
@@ -164,6 +172,7 @@ footer a {
   padding: 10px;
   color: #10afad;
 }
+
 @media screen and (max-width: 800px) {
   main {
     padding:5px;
