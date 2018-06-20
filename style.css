@@ -27,7 +27,7 @@ body {
 }
 main {
   background: url("https://s15.postimg.cc/t2xm0y4zv/blu_stripes.png");
-  width: 800px;
+  max-width: 800px;
   margin: auto;
   margin-top: 100px;
   padding: 50px;
@@ -68,7 +68,7 @@ main {
 }
 .title {
   font-size: 37px;
-  padding: 20px;
+  padding: 23px;
 }
 .row {
   display: flex;
@@ -95,14 +95,88 @@ main {
   color: #10afad;
 }
 #video {
-  padding: 50px;
+  padding: 60px;
 }
 #pricing {
   display:flex;
-  max-width: 700px;
+  max-width: 740px;
   margin: auto;
+  width:100%;
+}
+#pricing span {
+  font-size: 30px;
 }
 .package {
   border: 2px #1f5879 solid;
+  border-radius: 10px;
+  padding: 10px;
   margin: 10px;
+  background:#f0f5f8;
+  background: linear-gradient( #6ec6a0, #7bcaa900);
+  max-width: 250px;
+}
+.package h3 {
+  border-bottom: 2.5px #1f5879 solid;
+  padding-bottom: 10px;
+}
+.package:hover {
+  background: #f0f5f8;
+}
+button {
+    background-color: #10afad;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    font-size: 17px;
+    margin: 4px 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+button:hover {
+  background: #1f5879;
+}
+#form {
+  margin-top: 27px;
+  padding: 10px;
+}
+#form label {
+  font-size: 24px;
+}
+#email {
+  margin-top: 25px;
+  padding: 8px;
+  max-width: 500px;
+}
+#submit {
+    padding: 8px;
+}
+footer {
+  background-color:#f0f5f8;
+  padding: 14px;
+  border-top: 2px #1f5879 solid;
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+}
+footer a {
+  text-decoration: none;
+  padding: 10px;
+  color: #10afad;
+}
+@media screen and (max-width: 800px) {
+  main {
+    padding:5px;
+  }
+}
+@media screen and (max-width: 700px) {
+  #pricing {
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-between;
+  }
+  .package {
+    margin: auto;
+    margin-bottom: 10px;
+  }
 }
