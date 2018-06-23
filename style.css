@@ -25,21 +25,24 @@ body {
   width: auto;
   height: auto;
 }
+.menu {
+  display:none;
+}
 main {
   background: url("https://s15.postimg.cc/t2xm0y4zv/blu_stripes.png");
   max-width: 800px;
   margin: auto;
-  margin-top: 100px;
+  margin-top: 50px;
   padding: 50px;
 }
-#nav-bar ul {
+.drawer ul {
   list-style: none;
   display: flex;
   padding: 20px;
   margin: 20px;
   align-items: center;
 }
-#nav-bar li {
+.drawer li {
   list-style-type: none;
   margin: 0 10px;
   font-size: 18px;
@@ -69,16 +72,19 @@ main {
 .title {
   font-size: 37px;
   padding: 23px;
+  margin-top: 50px;
 }
 .row {
   display: flex;
   align-items: center;
+  max-width: 700px;
+  margin: auto;
 }
 .column {
   box-sizing: border-box;
 }
 .column.left {
-  width: 30%;
+  width: 25%;
 }
 .column.right {
   width: 70%;
@@ -93,12 +99,16 @@ main {
 .fas {
   font-size: 50px;
   color: #10afad;
+  cursor: pointer;
+}
+.fas.fa-bars {
+  padding-right: 10px;
 }
 #video {
   padding: 60px;
+  width: 80%
 }
 #pricing {
-  margin-top: 50px;
   display:flex;
   max-width: 740px;
   margin: auto;
@@ -123,6 +133,7 @@ main {
 .package:hover {
   background: #f0f5f8;
 }
+
 button {
     background-color: #10afad;
     border: none;
@@ -133,9 +144,6 @@ button {
     margin: 4px 2px;
     cursor: pointer;
     text-transform: uppercase;
-}
-button:hover {
-  background: #1f5879;
 }
 #form {
   margin-top: 27px;
@@ -159,6 +167,20 @@ button:hover {
     margin: 4px 2px;
     cursor: pointer;
 }
+button:hover, #submit:hover {
+  background: #1f5879;
+  animation-name: button-bgcolor; 
+  animation-duration: 1.75s;
+  animation-fill-mode: forwards;
+}
+@keyframes button-bgcolor {
+  0% {
+    background-color: #10afad;
+  }
+  100% {
+    background-color: #1f5879;
+  }
+}
 footer {
   background-color:#f0f5f8;
   padding: 14px;
@@ -172,10 +194,19 @@ footer a {
   padding: 10px;
   color: #10afad;
 }
-
 @media screen and (max-width: 800px) {
   main {
     padding:5px;
+  }
+    #header-img {
+    max-width: 360px;
+  } 
+    .nav-link {
+    font-size: 17px;
+  }
+  .drawer ul {
+   margin-left: 0;
+    margin-right:0;
   }
 }
 @media screen and (max-width: 700px) {
@@ -187,5 +218,48 @@ footer a {
   .package {
     margin: auto;
     margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .drawer {
+    display: none;
+  }
+  .drawer.responsive {
+    display: block;
+  }
+  .drawer.responsive ul {
+  display: block;
+  padding-top: 0;
+  margin:0;
+  }
+  #header {
+  height: auto;
+  }
+.mobile {
+  flex-wrap: wrap;
+  position: absolute;
+  height: auto;
+  }
+  .menu {
+    display: inline-block;
+  }
+  .title {
+    font-size: 30px;
+  }
+  #video {
+    padding: 5% 0;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 450px) {
+      #header-img {
+    max-width: 300px;
+  } 
+  .fas.fa-bars {
+  font-size: 40px;
+  color: #10afad;
+}
+  .title {
+  font-size: 28px;
   }
 }
